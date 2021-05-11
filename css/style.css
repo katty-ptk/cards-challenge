@@ -61,10 +61,53 @@ body {
     height: 100%;
     right: 0;
     background: hsl(298, 95%, 15%); 
+    border-radius: 15px;
 }
 
 .container #image img {
     opacity: 0.5;
     height: 100%;
     width: 100%;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+@media screen and ( max-width: 375px ) {
+    .container {
+        flex-direction: column;
+        height: 95%;
+    }
+
+    .container .infos {
+        position: absolute;
+        height: 60%;
+        width: 80%;
+        top: 30%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container .infos p {
+        margin: 20px 0px;
+    }
+
+    .container .infos .numbers {
+        flex-direction: column;
+    }
+
+    .container .infos .numbers div {
+        margin-top: 20px;
+    }
+
+    .container #image {
+        height: 30%;
+        top: 0;
+    }
+
+    .container #image img {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
 }
